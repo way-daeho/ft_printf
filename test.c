@@ -21,9 +21,11 @@ int main() {
 	// j = format_d(c);
 
 	// printf ("\nprintf : %d, format_pointer  : %d",k, j);
-	printf("%x, %X\n", -10, 10);
-	format_x(-10, 1);
-	printf("\n");
-	format_x(10, 2);
+	// printf("%x, %X\n", -10, 10);
+	// format_x(-10, 1);
+	// printf("\n");
+	// format_x(10, 2);
+	printf("%d",21484736);
+	// format_percent('%');
 	return 0;
 }

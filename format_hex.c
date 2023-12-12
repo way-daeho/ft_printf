@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:51:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/12 16:26:00 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/12 17:45:19 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,13 @@
 
 int	hex(unsigned int addr, int xX, int *flag, int *flag_sum);
 
-// int	format_x(va_list ap, int xX)
-// {
-// 	unsigned long long	addr;
-// 	int					flag_sum;
-// 	int					flag;
-
-// 	addr = va_arg(ap, unsigned long long);
-// 	flag_sum = 0;
-// 	flag = hex(addr, xX, &flag, &flag_sum);
-// 	if (flag == -1)
-// 		return (-1);
-// 	return (flag_sum + 2);
-// }
-
-int	format_x(int ap, int xX)
+int	format_x(va_list ap, int xX)
 {
-	unsigned int		addr;
-	int					flag_sum;
-	int					flag;
+	unsigned int	addr;
+	int				flag_sum;
+	int				flag;
 
-	addr = (unsigned int)ap;
+	addr = va_arg(ap, unsigned int);
 	flag_sum = 0;
 	flag = hex(addr, xX, &flag, &flag_sum);
 	if (flag == -1)
@@ -61,5 +47,3 @@ int	hex(unsigned int addr, int xX, int *flag, int *flag_sum)
 
 	return (0);
 }
-
-

@@ -6,24 +6,13 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 17:47:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/12 16:14:46 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/12 17:50:08 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum);
-
-// int	format_pointer(va_list ap)
-// {
-// 	unsigned long long	addr;
-// 	int					flag;
-
-// 	addr = (unsigned long long)(ap, void *);
-// 	flag = dectohex(addr);
-
-// 	return (flag);
-// }
 
 int	format_p(va_list ap)
 {
