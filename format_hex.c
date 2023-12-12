@@ -6,13 +6,13 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:51:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/11 22:20:09 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/12 16:26:00 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	hex(unsigned long long addr, int xX, int *flag, int *flag_sum);
+int	hex(unsigned int addr, int xX, int *flag, int *flag_sum);
 
 // int	format_x(va_list ap, int xX)
 // {
@@ -30,11 +30,11 @@ int	hex(unsigned long long addr, int xX, int *flag, int *flag_sum);
 
 int	format_x(int ap, int xX)
 {
-	unsigned long long	addr;
+	unsigned int		addr;
 	int					flag_sum;
 	int					flag;
 
-	addr = (long long)ap;
+	addr = (unsigned int)ap;
 	flag_sum = 0;
 	flag = hex(addr, xX, &flag, &flag_sum);
 	if (flag == -1)
@@ -42,7 +42,7 @@ int	format_x(int ap, int xX)
 	return (flag_sum + 2);
 }
 
-int	hex(unsigned long long addr, int xX, int *flag, int *flag_sum)
+int	hex(unsigned int addr, int xX, int *flag, int *flag_sum)
 {
 	char	*shex;
 	char	*bhex;
