@@ -6,18 +6,16 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:25:34 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/12 17:44:11 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/14 19:28:56 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	format_c(va_list ap)
+int	format_c(int ch)
 {
 	int		flag;
-	char	ch;
 
-	ch = va_arg(ap, int);
 	flag = write(1, &ch, 1);
 	if (flag == -1)
 		return (-1);
@@ -25,13 +23,11 @@ int	format_c(va_list ap)
 		return (flag);
 }
 
-int	format_s(va_list ap)
+int	format_s(char *s)
 {
 	int		flag;
 	int		flag_sum;
-	char	*s;
 
-	s = va_arg(ap, char *);
 	flag = 0;
 	flag_sum = 0;
 	while (*s)

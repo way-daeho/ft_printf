@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 17:47:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/12 17:50:08 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/14 18:21:12 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum);
 
-int	format_p(va_list ap)
+int	format_p(unsigned long long addr)
 {
-	unsigned long long	addr;
+	// unsigned long long	addr;
 	int					flag_sum;
 	int					flag;
 	int					first;
 
-	addr = va_arg(ap, unsigned long long);
+	// addr = va_arg(ap, unsigned long long);
 	first = 1;
 	flag_sum = 0;
 	flag = dectohex(addr, &first, &flag, &flag_sum);
