@@ -6,14 +6,13 @@
 #    By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 19:40:32 by daehlee           #+#    #+#              #
-#    Updated: 2023/12/13 12:37:58 by daehlee          ###   ########.fr        #
+#    Updated: 2023/12/14 19:06:33 by daehlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ft_printf.a
+NAME := libftprintf.a
 
-SRCS := format_c_s.c format_digit.c format_hex.c format_percent.c \
-		format_pointer.c ft_printf.c
+SRCS := format_c_s.c format_digit.c format_hex.c format_pointer.c ft_printf.c
 OBJS := $(SRCS:.c=.o)
 
 CC := cc
