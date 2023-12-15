@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:39:10 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/14 19:15:06 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/15 22:35:01 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,10 @@
 # include <stdarg.h>
 #include <stdio.h> // 테스트용 제출할 때 지우기
 
+int	ft_printf(const char *container, ...);
+int	format_c(va_list ap);
+int	format_s(va_list ap);
+int	format_d(va_list ap);
+int	format_x(va_list ap, int xX);
+int	format_p(va_list ap);
 #endif

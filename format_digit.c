@@ -6,22 +6,24 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:04:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/14 19:29:47 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/15 22:30:18 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	dectochar(int addr, int *sign, int *flag, int *flag_sum);
+static int	dectochar(int addr, int *sign, int *flag, int *flag_sum);
 
-int	format_d(int addr)
+int	format_d(va_list ap)
 {
 	int	flag_sum;
 	int	flag;
 	int	sign;
+	int	addr;
 
 	sign = 1;
 	flag_sum = 0;
+	addr = va_arg(ap, int);
 	flag = dectochar(addr, &sign, &flag, &flag_sum);
 	if (flag == -1)
 		return (-1);
@@ -30,7 +32,7 @@ int	format_d(int addr)
 	return (flag_sum);
 }
 
-int	dectochar(int addr, int *sign, int *flag, int *flag_sum)
+static int	dectochar(int addr, int *sign, int *flag, int *flag_sum)
 {
 	char	*decimal;
 

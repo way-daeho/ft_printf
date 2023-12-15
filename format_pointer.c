@@ -6,22 +6,22 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 17:47:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/14 18:21:12 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/15 22:44:28 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum);
+static int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum);
 
-int	format_p(unsigned long long addr)
+int	format_p(va_list ap)
 {
-	// unsigned long long	addr;
+	unsigned long long	addr;
 	int					flag_sum;
 	int					flag;
 	int					first;
 
-	// addr = va_arg(ap, unsigned long long);
+	addr = va_arg(ap, unsigned long long);
 	first = 1;
 	flag_sum = 0;
 	flag = dectohex(addr, &first, &flag, &flag_sum);
@@ -30,7 +30,7 @@ int	format_p(unsigned long long addr)
 	return (flag_sum + 2);
 }
 
-int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum)
+static int	dectohex(unsigned long long addr, int *first, int *flag, int *flag_sum)
 {
 	char	*hex;
 
