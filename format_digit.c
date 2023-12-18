@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:04:20 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/15 22:30:18 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/18 18:24:10 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ static int	dectochar(int addr, int *sign, int *flag, int *flag_sum)
 	decimal = "0123456789";
 	if (addr == -2147483648)
 	{
-		*flag = write(1, "-2147483648", 12);
+		*flag = write(1, "-2147483648", 11);
 		if (*flag == -1)
 			return (-1);
-		*flag_sum = 12;
+		*flag_sum = 11;
 		return (0);
 	}
 	if (addr < 0)
@@ -53,9 +53,12 @@ static int	dectochar(int addr, int *sign, int *flag, int *flag_sum)
 	}
 	if (addr / 10 != 0)
 		dectochar(addr / 10, sign, flag, flag_sum);
-	*flag = write(1, &decimal[addr % 10], 1);
-	if (*flag == -1)
-		return (-1);
-	*flag_sum += *flag;
+	if (write(1, &decimal[addr % 10], 1) == -1)
+	{
+		*flag = -1;
+		return (*flag);
+	}
+	else
+		*flag_sum += 1;
 	return (0);
 }

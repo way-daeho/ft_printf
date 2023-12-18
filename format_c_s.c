@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:25:34 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/15 21:58:41 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/18 17:27:53 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	format_s(va_list ap)
 	flag = 0;
 	flag_sum = 0;
 	s = va_arg(ap, char *);
+	if (s == NULL)
+		s = "(null)";
 	while (*s)
 	{
 		flag = write(1, s, 1);

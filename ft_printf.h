@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:39:10 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/15 22:35:01 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/18 17:39:20 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int	format_s(va_list ap);
 int	format_d(va_list ap);
 int	format_x(va_list ap, int xX);
 int	format_p(va_list ap);
+int	format_u(va_list ap);
 #endif
