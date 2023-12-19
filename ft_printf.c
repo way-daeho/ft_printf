@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 15:39:51 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/18 17:39:33 by daehlee          ###   ########.fr       */
+/*   Created: 2023/12/19 16:06:28 by daehlee           #+#    #+#             */
+/*   Updated: 2023/12/19 16:06:57 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static int	format_branch(const char container, va_list ap)
 	int	len;
 
 	len = 0;
-
 	if (container == 'c')
 		len = format_c(ap);
 	else if (container == 's')

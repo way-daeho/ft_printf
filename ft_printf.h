@@ -6,7 +6,7 @@
 /*   By: daehlee <daehlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:39:10 by daehlee           #+#    #+#             */
-/*   Updated: 2023/12/18 17:39:20 by daehlee          ###   ########.fr       */
+/*   Updated: 2023/12/19 16:05:45 by daehlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-#include <stdio.h> // 테스트용 제출할 때 지우기
 
 int	ft_printf(const char *container, ...);
 int	format_c(va_list ap);
