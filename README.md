@@ -35,7 +35,7 @@
 3. 결론적으론 다른 플래그를 제외, 필요한 인자들만 Parameter로 전달하여 필요한 값들만 주고 받는 형식으로 변경하였고, 터미널 종료 후, 메모리가 비었다는 상황이 돌아오면 다시 실행해볼 생각.
 4. 만약 recursive_flag 변수를 제거한 후에도 정상적으로 return (-1)을 할 경우 ft_printf Mandantory part 학습 및 과제 종료.
 -----
-## ft_printf 가변인자 개념 공부
+# ft_printf 가변인자 개념 공부
 int printf(const char *format, ...)
 
 format 문자열 상수 -> 서식 문자열이라 부름
